@@ -4,4 +4,9 @@
 # sirve para mostrar información en pantalla
 # y te va a compañar toda tu vida
 ###
+import sys
 
+print("Hola Matias", end="!")
+print('Hola', 'Matias', sep="_")
+
+print(123)
