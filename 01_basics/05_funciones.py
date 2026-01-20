@@ -26,3 +26,5 @@ decir_hola_con_nombre("Matias")
 decir_hola_con_nombre(nombre="Matias")
 
 decir_hola_con_nombre(123)
+
+# TODO: explicar returns, errores de returns, etc.

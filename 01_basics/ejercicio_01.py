@@ -18,3 +18,74 @@
 # 1- funcion principal que pregunta la operacion y los numeros y dependiendo de eso, esa funcion ejecuta suma, resta, multiplicacion o división
 
 # Si se complica usar if else solamente hacer la suma
+
+
+#utilize if y elif para poner las 4 condiciones y use el == para cada operacion y cree la variable resultado
+#agregue la opcion de que imprima un saludo al final
+
+
+
+# ================= respuesta ================
+
+# Tengo dudas como poner si es un str y dar la respuesta.
+
+# operacion = input("Elige una operación (+, -, *, /): ")
+# num1 = int (input("Ingresa el primer número: "))
+# num2 = int (input("Ingresa el segundo número: "))
+
+# if operacion == '+':
+#     resultado = num1 + num2
+#     print(f"El resultado es: {resultado}")
+
+# elif operacion == '-':
+#     resultado = num1 - num2
+#     print(f"El resultado es: {resultado}")
+
+# elif operacion == '*':
+#     resultado = num1 * num2
+#     print(f"El resultado es: {resultado}")
+
+# elif operacion == '/':
+#     resultado = num1 / num2
+#     print(f"El resultado es: {resultado}")
+
+# nombre = input("Ingrese nombre: ")
+# print("Muchas gracias por todo " + nombre)
+
+
+
+# ================= respuesta mejorada ================
+
+
+# Una funcion auxiliar hace solamente una cosa, no hace mas que una cosa criterios S.O.L.I.D   S: Single responsibility principle
+def calcular(operacion, num1, num2):
+    """
+    Calcular el resultado de una operación
+    :param operacion: operación a realizar
+    :param num1: primer número
+    :param num2: segundo número
+    :return: resultado de la operación
+    """
+    if operacion == '+':
+        return num1 + num2
+    elif operacion == '-':
+        return num1 - num2
+    elif operacion == '*':
+        return num1 * num2
+    elif operacion == '/':
+        return num1 / num2
+    else:
+        return None # TODO: Explicar por que no se devuelve nada
+
+operacion = input("Elige una operación (+, -, *, /): ")
+
+if operacion not in ['+', '-', '*', '/']:
+    print("Opcion incorrecta")
+    exit()
+
+num1 = int(input("Ingresa el primer número: "))
+num2 = int(input("Ingresa el segundo número: "))
+
+resultado = calcular(operacion, int(num1), int(num2))
+
+print(f"El resultado es: {resultado}")
