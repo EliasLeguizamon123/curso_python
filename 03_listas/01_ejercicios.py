@@ -3,6 +3,21 @@
 # mensaje = ["C", "o", "d", "i", "g", "o", " ", "s", "e", "c", "r", "e", "t", "o"]
 # Utilizando slicing y concatenación, crea una nueva lista que contenga solo el mensaje "secreto".
 
+def encontrar_mayor(num1, num2):
+    if num1 > num2:
+        return f"El número mayor es: {num1}"
+    elif num2 > num1:
+        return f"El número mayor es: {num2}"
+    else:
+        return "Ambos números son iguales"
+
+    
+num1 = int(input("Introduce el primer número: "))
+num2 = int(input("Introduce el segundo número: "))
+
+resultado = encontrar_mayor(num1, num2)
+print(resultado)
+
 # Ejercicio 2: Intercambio de posiciones
 # Dada la siguiente lista:
 # numeros = [10, 20, 30, 40, 50]
